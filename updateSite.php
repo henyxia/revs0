@@ -15,3 +15,24 @@ else
 {
   die("Error, couldn't open $file");
 }
+
+$source = '../git/revs0-master';
+$destination = '../www/';
+
+$sourceFiles = glob($source . '*');
+
+foreach($sourceFiles as $file) {
+
+    $baseFile = basename($file);
+
+    if (file_exists($destination . $baseFile)) {
+
+        $originalHash = md5_file($file);
+        $destinationHash = md5_file($destination . $baseFile);
+        if ($originalHash === $destinationHash) {
+            continue;
+        }
+
+    }
+    copy($file, $destination . $baseFile);
+}
