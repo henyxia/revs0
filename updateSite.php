@@ -19,7 +19,7 @@ else
   die("Error, couldn't open $file");
 }
 echo "Syncing last update\n";
-$source = '../git/revs0-master';
+$source = '../git/revs0-master/';
 $destination = '../www/';
 
 $sourceFiles = glob($source . '*');
