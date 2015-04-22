@@ -1,3 +1,3 @@
 Options +FollowSymlinks
 RewriteEngine on 
-RewriteRule   ^www/test.php$   www/globals.php  [L]
+RewriteRule   ^/www/test.php$   /www/globals.php  [L]
