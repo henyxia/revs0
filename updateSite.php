@@ -1,6 +1,9 @@
 <?php
+echo "<pre>";
+echo "Getting last update";
 if(file_put_contents("../git/master.zip", fopen("https://github.com/henyxia/revs0/archive/master.zip", 'r')) == false)
     die("Unable to download the last update");
+echo "Extracting last update";
 $file = '../git/master.zip';
 $path = pathinfo(realpath($file), PATHINFO_DIRNAME);
 $zip = new ZipArchive;
@@ -15,7 +18,7 @@ else
 {
   die("Error, couldn't open $file");
 }
-
+echo "Syncing last update";
 $source = '../git/revs0-master';
 $destination = '../www/';
 
@@ -36,3 +39,4 @@ foreach($sourceFiles as $file) {
     }
     copy($file, $destination . $baseFile);
 }
+echo "</pre>";
