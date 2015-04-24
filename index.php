@@ -4,6 +4,9 @@
         <link rel="stylesheet" type="text/css" href="css/theme">
     </head>
     <body>
-        Under construction
+        <div id="home">
+            Revs0.com
+            Under construction
+        </div>
     </body>
 </html>
