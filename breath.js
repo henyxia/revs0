@@ -10,8 +10,8 @@ function breathOnce()
     g = d.getElementsByTagName('body')[0],
     x = w.innerWidth || e.clientWidth || g.clientWidth,
     y = w.innerHeight|| e.clientHeight|| g.clientHeight;
-    document.getElementById("home").style.top = x+"px";
-    document.getElementById("home").style.left = y+"px";
+    document.getElementById("home").style.top = y+"px";
+    document.getElementById("home").style.left = x+"px";
     breath();
 }
 
