@@ -1,6 +1,7 @@
 window.onload = breathOnce;
 var actuSec = 0;
-var ax, ay, vx, vy, px, py;
+var punch = 100;
+var ax, ay, vx = 0, vy = 0, px, py;
 
 function breathOnce()
 {
@@ -24,16 +25,21 @@ function breath()
     document.getElementById("home").style.boxShadow = "0px 0px 10px rgb("+(155+actuSec)+","+(155+actuSec)+","+(155+actuSec)+")";
     
     //Centering
-    var punch = 100;
     var w = window,
     d = document,
     e = d.documentElement,
     g = d.getElementsByTagName('body')[0],
     x = w.innerWidth || e.clientWidth || g.clientWidth,
     y = w.innerHeight|| e.clientHeight|| g.clientHeight;
-    var ax = Math.floor((Math.random()*punch)-(punch/2));
-    var ay = Math.floor((Math.random()*punch)-(punch/2));
-    
+    ax = Math.floor((Math.random()*punch)-(punch/2));
+    ay = Math.floor((Math.random()*punch)-(punch/2));
+    vx = vx + ax*punch/1000;
+    vy = vy + ay*punch/1000;
+    px = vx;
+    py = vy;
+    document.getElementById("home").style.top = py/2+"px";
+    document.getElementById("home").style.left = px/2+"px";
+
     //And again
-    setTimeout('breath();','100');
+    setTimeout('breath();', punch);
 }
