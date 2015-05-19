@@ -11,8 +11,8 @@ function breathOnce()
     g = d.getElementsByTagName('body')[0],
     x = w.innerWidth || e.clientWidth || g.clientWidth,
     y = w.innerHeight|| e.clientHeight|| g.clientHeight;
-    px = y/2+"px";
-    py = x/2+"px";
+    px = y/2;
+    py = x/2;
     breath();
 }
 
