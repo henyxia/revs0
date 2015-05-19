@@ -1,6 +1,6 @@
 window.onload = breathOnce;
 var actuSec = 0;
-var punch = 100;
+var punch = 200;
 var ax, ay, vx = 0, vy = 0, px, py;
 
 function breathOnce()
@@ -11,8 +11,8 @@ function breathOnce()
     g = d.getElementsByTagName('body')[0],
     x = w.innerWidth || e.clientWidth || g.clientWidth,
     y = w.innerHeight|| e.clientHeight|| g.clientHeight;
-    document.getElementById("home").style.top = y/2+"px";
-    document.getElementById("home").style.left = x/2+"px";
+    px = y/2+"px";
+    py = x/2+"px";
     breath();
 }
 
