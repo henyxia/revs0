@@ -35,8 +35,8 @@ function breath()
     ay = Math.floor((Math.random()*punch)-(punch/2));
     vx = vx + ax*punch/1000;
     vy = vy + ay*punch/1000;
-    px = vx;
-    py = vy;
+    px = px + vx*punch/1000;
+    py = py + vy*punch/1000;
     document.getElementById("home").style.top = py/2+"px";
     document.getElementById("home").style.left = px/2+"px";
 
