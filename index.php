@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/theme">
 </head>
 <body>
-    <div id="home" style="text-align:center">
+    <div id="home">
         <br/>
         Revs0.com
         <br/>
