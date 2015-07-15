@@ -1,3 +1,4 @@
+/*
 window.onload = breathOnce;
 var actuSec = 0;
 var punch = 200;
@@ -42,4 +43,17 @@ function breath()
 
     //And again
     setTimeout('breath();', punch);
-}
+}*/
+
+$(document).ready(function() {
+    function pulsate() {
+        $("home").animate({ opacity: 0.2 }, 1200, 'linear')
+                     .animate({ opacity: 1 }, 1200, 'linear', pulsate)
+                     .click(function() {
+                         $(this).animate({ opacity: 1 }, 1200, 'linear');
+                         $(this).stop();
+                     });
+        }
+
+    pulsate();
+});
