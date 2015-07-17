@@ -33,15 +33,6 @@ else if($_GET["url"] == 'fonts/fontawesome-webfont.eot' ||
 		$_GET["url"] == 'fonts/fontawesome-social-webfont.ttf' ||
 		$_GET["url"] == 'fonts/fontawesome-social-webfont.svg')
 	include($_GET["url"]);
-	//header("HTTP/1.0 404 Font ".$_GET['url']." is not found");
-
-
-
-
-
-
-
-
 else if($_GET["url"] == "js/breath")
     include("breath.js");
 else if($_GET["url"] == "debug/globals")
