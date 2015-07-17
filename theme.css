@@ -204,7 +204,7 @@ hr {
 
 #wrapper {
 		border-bottom: 1px solid rgba(0,0,0,.1);
-	background: #FFFFFF url(img/background.png) repeat;
+	background: #FFFFFF url(../img/background.png) repeat;
 }
 
 #footer-wrapper

@@ -23,11 +23,29 @@ else if($_GET["url"] == "img/home4.png")
 	include("images/h1.png");
 else if($_GET["url"] == "img/background.png")
 	include("images/bg.png");
+else if($_GET["url"] == 'fonts/fontawesome-webfont.eot' ||
+		$_GET["url"] == 'fonts/fontawesome-webfont.eot' ||
+		$_GET["url"] == 'fonts/fontawesome-webfont.woff' ||
+		$_GET["url"] == 'fonts/fontawesome-webfont.ttf' ||
+		$_GET["url"] == 'fonts/fontawesome-webfont.svg' ||
+		$_GET["url"] == 'fonts/fontawesome-social-webfont.eot' ||
+		$_GET["url"] == 'fonts/fontawesome-social-webfont.woff' ||
+		$_GET["url"] == 'fonts/fontawesome-social-webfont.ttf' ||
+		$_GET["url"] == 'fonts/fontawesome-social-webfont.svg')
+	include($_GET["url"]);
+	//header("HTTP/1.0 404 Font ".$_GET['url']." is not found");
+
+
+
+
+
+
+
+
 else if($_GET["url"] == "js/breath")
     include("breath.js");
 else if($_GET["url"] == "debug/globals")
     include("globals.php");
 else
 	header("HTTP/1.0 404 Expected ".$_GET['url']." is not found");
-	//header("Location: http://www.revs0.com");
 ?>
