@@ -18,9 +18,9 @@ else if($_GET["url"] == "img/home1.png")
 else if($_GET["url"] == "img/home2.png")
 	include("images/h2.png");
 else if($_GET["url"] == "img/home3.png")
-	include("images/h1.png");
+	include("images/h3.png");
 else if($_GET["url"] == "img/home4.png")
-	include("images/h1.png");
+	include("images/h4.png");
 else if($_GET["url"] == "img/background.png")
 	include("images/bg.png");
 else if($_GET["url"] == 'fonts/fontawesome-webfont.eot' ||
