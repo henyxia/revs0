@@ -1,6 +1,9 @@
 <?php
 if($_GET["url"] == "")
-    include("index.html");
+{
+	require("projects_list.php");
+	include("index.html");
+}
 else if($_GET["url"] == "index.html")
     header("Location: http://www.revs0.com");
 else if($_GET["url"] == "css/theme")
