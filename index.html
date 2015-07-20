@@ -90,10 +90,10 @@ Released   : 20130631
 				</div>
 				<ul class="style2">
 <?php
-for($i=0; $i<$projects["number"]; $i++)
+for($i=0; $i<count($projects); $i++)
 {
 	echo '<li><a href="#">';
-	echo $projects["name"][$i];
+	echo $projects[$i]["name"];
 	echo '</a></li>';
 }
 ?>
