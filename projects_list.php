@@ -35,6 +35,12 @@ $projects[6]["prog"]	= true;
 $projects[6]["elec"]	= true;
 $projects[6]["fpga"]	= false;
 $projects[6]["othe"]	= true;
+$projects[7]["name"]	= "This website";
+$projects[6]["prog"]	= true;
+$projects[6]["elec"]	= false;
+$projects[6]["fpga"]	= false;
+$projects[6]["othe"]	= false;
+
 usort($projects, "custom_sort");
 function custom_sort($a,$b)
 {
