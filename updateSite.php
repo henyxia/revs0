@@ -23,7 +23,8 @@ $source = '../git/revs0-master/';
 $destination = '../www/';
 
 //$sourceFiles = glob($source . '*');
-$sourceFiles = glob($source. '{,.}*{/}*', GLOB_BRACE);
+//$sourceFiles = glob($source. '{,.}*{/}*', GLOB_BRACE);
+$sourceFiles = glob('{./*,./*/*}', GLOB_BRACE);
 
 foreach($sourceFiles as $file) {
 
