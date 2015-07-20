@@ -1,1 +1,111 @@
-/home/ovh/shared/__ovh/fr/welcome.html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Sewing Bobbins 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130631
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Revs0</title>
+<meta name="keywords" content="Revs0 projects" />
+<meta name="description" content="The homepage of the different projects made by Jean Wasilewski" />
+<link href="css/theme" rel="stylesheet" type="text/css" media="all" />
+<link href="css/fonts" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header" class="container">
+			<div id="logo">
+				<h1><a href="#">Revs0</a></h1>
+				<p>Bunch of cool projects</p>
+			</div>
+			<!--<div id="banner"> <a href="#" class="image"><img src="img/home1.png" alt="" /></a> </div>-->
+		</div>
+	</div>
+	<div id="menu-wrapper">
+		<div id="menu" class="container">
+			<ul>
+				<li class="current_page_item"><a href="#">Homepage</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<!-- end #menu --> 
+	</div>
+	<div id="portfolio-wrapper">
+		<div id="portfolio" class="container">
+			<div id="column1">
+				<div class="title">
+					<h2>Programming</h2>
+				</div>
+				<a href="#" class="image image-full"><img src="img/home1.png" alt="" /></a>
+				<p>Anything from C to Web and even some Java ! Here you go ! All the programming stuff !</p>
+				<a href="#" class="icon icon-arrow-right button">Read More</a> </div>
+			<div id="column2">
+				<div class="title">
+					<h2>Electronics</h2>
+				</div>
+				<a href="#" class="image image-full"><img src="img/home2.png" alt="" /></a>
+				<p>From VCC, directly to the ground ! Resistors, capacitors, and almost everything that can contains current.</p>
+				<a href="#" class="icon icon-arrow-right button">Read More</a> </div>
+			<div id="column3">
+				<div class="title">
+					<h2>FPGA</h2>
+				</div>
+				<a href="#" class="image image-full"><img src="img/home3.png" alt="" /></a>
+				<p>Small chips ? High frequencies ? Incredible number of inputs/outputs ? Here come the FPGA !</p>
+				<a href="#" class="icon icon-arrow-right button">Read More</a> </div>
+			<div id="column4">
+				<div class="title">
+					<h2>Other projects</h2>
+				</div>
+				<a href="#" class="image image-full"><img src="img/home4.png" alt="" /></a>
+				<p>Sometimes you need to make the best coffee in the world, and sometime it's a six months long project</p>
+				<a href="#" class="icon icon-arrow-right button">Read More</a> </div>
+		</div>
+	</div>
+	<div id="page" class="container">
+		<div id="content">
+			<div class="title">
+				<h2>What this website is all about</h2>
+				<span class="byline">Well, it gathers many projects and describe how they works</span>
+			</div>
+			<p>This website try to describe some projects, why and how they are done. We try to give as many informations as possible to ensure that each project is reusable by anybody. Have any question ? Feel free to send messages via the contact form !</p>
+			<p>Also, this website need to give a big thanks to <a href="http://templated.co" rel="nofollow">TEMPLATED</a> for their awesome template <strong>Sewing Bobbins</strong>, a free, fully standards-compliant CSS template.</p>
+		</div>
+		<div id="sidebar">
+			<div class="box2">
+				<div class="title">
+					<h2>List of projects</h2>
+				</div>
+				<ul class="style2">
+<?php
+for($i=0; $i<count($projects); $i++)
+{
+	echo '<li><a href="#">';
+	echo $projects[$i]["name"];
+	echo '</a></li>';
+}
+?>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+<div id="copyright" class="container">
+	<p>&copy; Revs0.com All rights reserved. | Website by Jean Wasilewski. | Template by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+</body>
+</html>
