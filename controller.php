@@ -9,12 +9,12 @@ else if($_GET["url"] == "index.html")
 else if($_GET["url"] == "css/theme")
 {
     header("Content-type: text/css");
-    include("theme.css");
+    readfile("theme.css");
 }
 else if($_GET["url"] == "css/fonts")
 {
     header("Content-type: text/css");
-    include("fonts.css");
+    readfile("fonts.css");
 }
 else if($_GET["url"] == "img/home1.png")
 {
@@ -50,9 +50,9 @@ else if($_GET["url"] == 'fonts/fontawesome-webfont.eot' ||
 		$_GET["url"] == 'fonts/fontawesome-social-webfont.woff' ||
 		$_GET["url"] == 'fonts/fontawesome-social-webfont.ttf' ||
 		$_GET["url"] == 'fonts/fontawesome-social-webfont.svg')
-	include($_GET["url"]);
+	readfile($_GET["url"]);
 else if($_GET["url"] == "js/breath")
-    include("breath.js");
+    readfile("breath.js");
 else if($_GET["url"] == "debug/globals")
     include("globals.php");
 else
