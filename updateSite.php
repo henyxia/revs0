@@ -68,12 +68,12 @@ function scan_dirs($dir)
 }
 
 scan_dirs($src);
-var_dump($GLOBALS["files"]);
+//var_dump($GLOBALS["files"]);
 
 for($i=0; $i<$GLOBALS["numberOfFiles"]; $i++)
 	$GLOBALS["target"][$i] = preg_replace("/".preg_quote($src, '/')."/", $dst, $GLOBALS["files"][$i]);
 
-var_dump($GLOBALS["target"]);
+//var_dump($GLOBALS["target"]);
 for($i=0; $i<$GLOBALS["numberOfFiles"]; $i++)
 {
     if (file_exists($GLOBALS["target"][$i])) {
