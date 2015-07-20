@@ -19,29 +19,75 @@ else
   die("Error, couldn't open $file");
 }
 echo "Syncing last update\n";
-$source = '../git/revs0-master/';
-$destination = '../www/';
+define("MAX_LEN", 14);
 
-//$sourceFiles = glob($source . '*');
-//$sourceFiles = glob($source. '{,.}*{/}*', GLOB_BRACE);
-$sourceFiles = glob($source.'{*,./*/*}', GLOB_BRACE);
+function short_name($str, $limit)
+{
+	if ($limit < 3)
+		$limit = 3;
+	if (strlen($str) > $limit)
+		return substr($str, 0, $limit - 3) . '...';
+	else
+		return $str;
+}
 
-foreach($sourceFiles as $file) {
+$src = "../git/revs0-master/";
+$dst = "../www/";
+$GLOBALS["numberOfFiles"] = 0;
 
-    $baseFile = basename($file);
+function scan_dirs($dir)
+{
+	if (is_dir($dir))
+	{
+		if ($dh = opendir($dir))
+		{
+			while (($file = readdir($dh)) !== false)
+			{
+				$type = filetype($dir.$file);
+				if($type == "dir")
+				{
+					if($file == ".")
+						continue;
+					if($file == "..")
+						continue;
+					scan_dirs($dir.$file."/");
+				}
+				elseif($type == "file")
+				{
+					$GLOBALS["files"][$GLOBALS["numberOfFiles"]] = $dir.$file;
+					$GLOBALS["numberOfFiles"]++;
+				}
+				else
+					echo "U\t".short_name($file, MAX_LEN)."\tPDC";
+			}
+			closedir($dh);
+		}
+	}
+	else
+		die("Something bad happened");
+}
 
-    if (file_exists($destination . $baseFile)) {
+scan_dirs($src);
+var_dump($GLOBALS["files"]);
 
-        $originalHash = md5_file($file);
-        $destinationHash = md5_file($destination . $baseFile);
+for($i=0; $i<$GLOBALS["numberOfFiles"]; $i++)
+	$GLOBALS["target"][$i] = preg_replace("/".preg_quote($src, '/')."/", $dst, $GLOBALS["files"][$i]);
+
+var_dump($GLOBALS["target"]);
+for($i=0; $i<$GLOBALS["numberOfFiles"]; $i++)
+{
+    if (file_exists($GLOBALS["target"][$i])) {
+        $originalHash = md5_file($GLOBALS["files"][$i]);
+        $destinationHash = md5_file($GLOBALS["target"][$i]);
         if ($originalHash === $destinationHash)
 		{
-			echo "OK\tNo need to update ".$file."\n";
+			echo "OK\tNo need to update ".$GLOBALS["target"][$i]."\n";
             continue;
         }
-
     }
-    echo "SYNC\tUpdating ".$file." -> ". $destination . $baseFile."\n";
-    copy($file, $destination . $baseFile);
+    echo "SYNC\tUpdating ".$GLOBALS["files"][$i]." -> ".$GLOBALS["target"][$i]."\n";
+	if(!file_exists(dirname($GLOBALS["target"][$i])))
+		mkdir(dirname($GLOBALS["target"][$i]), 0775, true);
+    copy($GLOBALS["files"][$i], $GLOBALS["target"][$i]);
 }
 echo "</pre>";
