@@ -23,7 +23,7 @@ $source = '../git/revs0-master/';
 $destination = '../www/';
 
 //$sourceFiles = glob($source . '*');
-$sourceFiles = glob($source. '{,.}*', GLOB_BRACE);
+$sourceFiles = glob($source. '{,.}*{/}*', GLOB_BRACE);
 
 foreach($sourceFiles as $file) {
 
@@ -33,12 +33,14 @@ foreach($sourceFiles as $file) {
 
         $originalHash = md5_file($file);
         $destinationHash = md5_file($destination . $baseFile);
-        if ($originalHash === $destinationHash) {
+        if ($originalHash === $destinationHash)
+		{
+			echo "OK\tNo need to update ".$file."\n";
             continue;
         }
 
     }
-    echo "SYNC: ".$file." -> ". $destination . $baseFile."\n";
+    echo "SYNC\tUpdating ".$file." -> ". $destination . $baseFile."\n";
     copy($file, $destination . $baseFile);
 }
 echo "</pre>";
