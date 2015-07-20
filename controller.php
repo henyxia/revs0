@@ -19,27 +19,27 @@ else if($_GET["url"] == "css/fonts")
 else if($_GET["url"] == "img/home1.png")
 {
 	header("Content-type: image/png");
-	include("images/h1.png");
+	readfile("images/h1.png");
 }
 else if($_GET["url"] == "img/home2.png")
 {
 	header("Content-type: image/png");
-	include("images/h2.png");
+	readfile("images/h2.png");
 }
 else if($_GET["url"] == "img/home3.png")
 {
 	header("Content-type: image/png");
-	include("images/h3.png");
+	readfile("images/h3.png");
 }
 else if($_GET["url"] == "img/home4.png")
 {
 	header("Content-type: image/png");
-	include("images/h4.png");
+	readfile("images/h4.png");
 }
 else if($_GET["url"] == "img/background.png")
 {
 	header("Content-type: image/png");
-	include("images/bg.png");
+	readfile("images/bg.png");
 }
 else if($_GET["url"] == 'fonts/fontawesome-webfont.eot' ||
 		$_GET["url"] == 'fonts/fontawesome-webfont.eot' ||
