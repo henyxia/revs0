@@ -92,7 +92,16 @@ Released   : 20130631
 <?php
 for($i=0; $i<count($projects); $i++)
 {
-	echo '<li><a href="#">';
+	echo '<li><a class="';
+	if($projects[$i][prog])
+		echo "prog";
+	if($projects[$i][elec])
+		echo " elec";
+	if($projects[$i][fpga])
+		echo "fpga";
+	if($projects[$i][othe])
+		echo " othe";
+	echo '" href="#">';
 	echo $projects[$i]["name"];
 	echo '</a></li>';
 }
