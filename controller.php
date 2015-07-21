@@ -43,6 +43,8 @@ else if($_GET["url"] == "img/background.png")
 }
 else if($_GET["url"] == "favicon.ico")
 	readfile("favicon.ico");
+else if($_GET["url"] == "favicon.png")
+	readfile("favicon.png");
 else if($_GET["url"] == 'fonts/fontawesome-webfont.eot' ||
 		$_GET["url"] == 'fonts/fontawesome-webfont.eot' ||
 		$_GET["url"] == 'fonts/fontawesome-webfont.woff' ||
