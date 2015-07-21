@@ -42,9 +42,15 @@ else if($_GET["url"] == "img/background.png")
 	readfile("images/bg.png");
 }
 else if($_GET["url"] == "favicon.ico")
+{
+	header("Content-type: image/x-icon");
 	readfile("favicon.ico");
+}
 else if($_GET["url"] == "favicon.png")
+{
+	header("Content-type: image/png");
 	readfile("favicon.png");
+}
 else if($_GET["url"] == 'fonts/fontawesome-webfont.eot' ||
 		$_GET["url"] == 'fonts/fontawesome-webfont.eot' ||
 		$_GET["url"] == 'fonts/fontawesome-webfont.woff' ||
