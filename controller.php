@@ -41,6 +41,8 @@ else if($_GET["url"] == "img/background.png")
 	header("Content-type: image/png");
 	readfile("images/bg.png");
 }
+else if($_GET["url"] == "favicon.ico")
+	readfile("favicon.ico");
 else if($_GET["url"] == 'fonts/fontawesome-webfont.eot' ||
 		$_GET["url"] == 'fonts/fontawesome-webfont.eot' ||
 		$_GET["url"] == 'fonts/fontawesome-webfont.woff' ||
