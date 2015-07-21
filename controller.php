@@ -51,6 +51,16 @@ else if($_GET["url"] == "favicon.png")
 	header("Content-type: image/png");
 	readfile("favicon.png");
 }
+else if($_GET["url" == "main.js"])
+{
+	header("Content-type: application/javascript");
+	readfile("main.js");
+}
+else if($_GET["url" == "jquery.js"])
+{
+	header("Content-type: application/javascript");
+	readfile("jquery-1.11.3.min.js");
+}
 else if($_GET["url"] == 'fonts/fontawesome-webfont.eot' ||
 		$_GET["url"] == 'fonts/fontawesome-webfont.eot' ||
 		$_GET["url"] == 'fonts/fontawesome-webfont.woff' ||
