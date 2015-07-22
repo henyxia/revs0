@@ -9,5 +9,4 @@ function activateElements(elem)
 			list.childNodes[i].childNodes[0].className = "disabled";
 		else
 			list.childNodes[i].childNodes[0].className = "";
-	return false;
 }
