@@ -104,7 +104,9 @@ for($i=0; $i<count($projects); $i++)
 		echo " fpga";
 	if($projects[$i][othe])
 		echo " othe";
-	echo ' href="#">';
+	echo ' href="javascript:void(0)" onclick="switchToSubject(\'';
+	echo "\\".$$projects[$i]["fold"]."\\".$$projects[$i]["arti"];
+	echo '\')">';
 	echo $projects[$i]["name"];
 	echo '</a></li>';
 }
