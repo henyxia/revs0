@@ -1,15 +1,4 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by TEMPLATED
-http://templated.co
-Released for free under the Creative Commons Attribution License
-
-Name       : Sewing Bobbins 
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20130631
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -37,8 +26,8 @@ Released   : 20130631
 	<div id="menu-wrapper">
 		<div id="menu" class="container">
 			<ul>
-				<li class="current_page_item" onclick="$('html, body').stop().animate({scrollTop:0}, '500', 'swing')"><a href="javascript:void(0)">Homepage</a></li>
-				<li onclick="$('html, body').animate({ scrollTop: $('#page').offset().top }, 500);"><a href="javascript:void(0)">Projects</a></li>
+				<li id="homeButton" class="current_page_item" onclick="$('html, body').stop().animate({scrollTop:0}, '500', 'swing')"><a href="javascript:void(0)">Homepage</a></li>
+				<li id="projectButton" onclick="$('html, body').animate({ scrollTop: $('#page').offset().top }, 500);"><a href="javascript:void(0)">Projects</a></li>
 				<li onclick="$('html, body').animate({ scrollTop: $('#page').offset().top }, 500);"><a href="javascript:void(0)">About</a></li>
 				<li onclick="alert('In construction')"><a href="javascript:void(0)">Contact</a></li>
 			</ul>
@@ -115,8 +104,8 @@ for($i=0; $i<count($projects); $i++)
 			</div>
 		</div>
 	</div>
-</div>
-
+	<div id="project" class="container">
+	</div>
 </div>
 <div id="copyright" class="container">
 	<p>&copy; Revs0.com All rights reserved. | Website by Jean Wasilewski. | Template by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>

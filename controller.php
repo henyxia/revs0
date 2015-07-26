@@ -46,10 +46,10 @@ else if($_GET["url"] == "favicon.ico")
 	header("Content-type: image/x-icon");
 	readfile("favicon.ico");
 }
-else if($_GET["url"] == "favicon.png")
+else if($_GET["url"] == "img/loading.gif")
 {
-	header("Content-type: image/png");
-	readfile("favicon.png");
+	header("Content-type: image/gif");
+	readfile("images/loading.gif");
 }
 else if($_GET["url"] == "main.js")
 {

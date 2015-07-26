@@ -10,3 +10,13 @@ function activateElements(elem)
 		else
 			list.childNodes[i].childNodes[0].className = "";
 }
+
+function switchToSubject(url)
+{
+	$("#page").fadeOut(500, "swing", function (){return true;});
+	$("#portfolio-wrapper").fadeOut(500, "swing", function (){return true;});
+	$("html, body").animate({ scrollTop: $('#menu-wrapper').offset().top }, 500);
+	$("#homeButton").removeClass("current_page_item");
+	$("#projectButton").addClass("current_page_item");
+	$("#project").html('<div id="loadingContent" class="content" align="center"><p>Content is loading ...</p><img src="img/loading.gif" /></div>')
+}
