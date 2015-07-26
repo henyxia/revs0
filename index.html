@@ -96,13 +96,13 @@ Released   : 20130631
 for($i=0; $i<count($projects); $i++)
 {
 	echo '<li><a';
-	if($projects[$i][prog])
+	if($projects[$i]["prog"])
 		echo " prog";
-	if($projects[$i][elec])
+	if($projects[$i]["elec"])
 		echo " elec";
-	if($projects[$i][fpga])
+	if($projects[$i]["fpga"])
 		echo " fpga";
-	if($projects[$i][othe])
+	if($projects[$i]["othe"])
 		echo " othe";
 	echo ' href="javascript:void(0)" onclick="switchToSubject(\'';
 	echo "\\".$projects[$i]["fold"]."\\".$projects[$i]["arti"];
