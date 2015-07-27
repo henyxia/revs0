@@ -33,3 +33,13 @@ function switchToSubject(url)
 		alert( "complete" );
 	});*/
 }
+
+function goBackToHome()
+{
+	$("#page").fadeOut(500, "swing", function (){return true;});
+	$("#portfolio-wrapper").fadeIn(500, "swing", function (){return true;});
+	$("html, body").animate({ scrollTop: $('#wrapper').offset().top }, 500);
+	$("#homeButton").addClass("current_page_item");
+	$("#projectButton").removeClass("current_page_item");
+	$("#project").hide();
+}
