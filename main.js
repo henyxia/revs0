@@ -13,13 +13,14 @@ function activateElements(elem)
 
 function switchToSubject(url)
 {
+	console.debug(url);
 	$("#page").fadeOut(500, "swing", function (){return true;});
 	$("#portfolio-wrapper").fadeOut(500, "swing", function (){return true;});
 	$("html, body").animate({ scrollTop: $('#menu-wrapper').offset().top }, 500);
 	$("#homeButton").removeClass("current_page_item");
 	$("#projectButton").addClass("current_page_item");
 	$("#project").html('<div id="loadingContent" class="content" align="center"><p>Content is loading ...</p><img src="img/loading.gif" /></div>');
-	var jqxhr = $.ajax("example.php")
+	var jqxhr = $.ajax(url.replace(/([a-zA-Z0-9]+)\/([a-zA-Z0-9]+)/, '$1_$2'))
 	.done(function()
 	{
 		alert("success");

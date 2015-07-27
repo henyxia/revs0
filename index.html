@@ -94,7 +94,7 @@ for($i=0; $i<count($projects); $i++)
 	if($projects[$i]["othe"])
 		echo " othe";
 	echo ' href="javascript:void(0)" onclick="switchToSubject(\'';
-	echo "\\".$projects[$i]["fold"]."\\".$projects[$i]["arti"];
+	echo "/".$projects[$i]["fold"]."/".$projects[$i]["arti"];
 	echo '\')">';
 	echo $projects[$i]["name"];
 	echo '</a></li>';
