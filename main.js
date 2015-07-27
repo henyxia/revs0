@@ -18,5 +18,18 @@ function switchToSubject(url)
 	$("html, body").animate({ scrollTop: $('#menu-wrapper').offset().top }, 500);
 	$("#homeButton").removeClass("current_page_item");
 	$("#projectButton").addClass("current_page_item");
-	$("#project").html('<div id="loadingContent" class="content" align="center"><p>Content is loading ...</p><img src="img/loading.gif" /></div>')
+	$("#project").html('<div id="loadingContent" class="content" align="center"><p>Content is loading ...</p><img src="img/loading.gif" /></div>');
+	var jqxhr = $.ajax("example.php")
+	.done(function()
+	{
+		alert("success");
+	})
+	.fail(function()
+	{
+		$("#project").html('<div id="loadingContent" class="content" align="center"><p>The content is not available yet ...</p></div>');
+	})/*
+	.always(function()
+	{
+		alert( "complete" );
+	});*/
 }
