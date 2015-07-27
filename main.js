@@ -36,7 +36,7 @@ function switchToSubject(url)
 
 function goBackToHome()
 {
-	$("#page").fadeOut(500, "swing", function (){return true;});
+	$("#page").fadeIn(500, "swing", function (){return true;});
 	$("#portfolio-wrapper").fadeIn(500, "swing", function (){return true;});
 	$("html, body").animate({ scrollTop: $('#wrapper').offset().top }, 500);
 	$("#homeButton").addClass("current_page_item");
