@@ -624,7 +624,24 @@ hr {
 	width: 345px;
 }
 
+.projectStatusTitle
+{
+	margin-bottom: 1em;
+}
 
+.projectStatusTitle h2
+{
+    font-weight: 700;
+    font-size: 2em;
+    color: #2F94A8;
+}
+
+.projectStatusHeadline ul
+{
+	list-style: none;
+    line-height: normal;
+    padding: 5px 0px 0px 0px;
+}
 
 
 

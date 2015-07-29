@@ -10,7 +10,7 @@ function renderProject($project)
 </div>
 <div id="projectSidebar">
 	<div class="projectStatus">
-		<div class="title">
+		<div class="projectStatusTitle">
 			<h2>Project Status</h2>
 		</div>
 		<div class="projectStatusHeadline">
