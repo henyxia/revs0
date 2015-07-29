@@ -6,9 +6,14 @@ if($_GET["url"] == "")
 }
 else if(preg_match("/([a-zA-Z0-9]+)_([a-zA-Z0-9]+)/", $_GET["url"], $matches))
 {
-	echo "<pre>";
-	var_dump($matches);
-	echo "</pre>";
+	$folder = $matches[1];
+	$article = $matches[2];
+
+	require_once("projects_list.php");
+	require_once("projects_tools.php");
+
+	if((@include getProjectName($projects, $folder, $article)) === false)
+		require_once("project_not_found.php");
 }
 else if($_GET["url"] == "index.html")
     header("Location: http://www.revs0.com");
