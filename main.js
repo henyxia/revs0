@@ -20,10 +20,11 @@ function switchToSubject(url)
 	$("#homeButton").removeClass("current_page_item");
 	$("#projectButton").addClass("current_page_item");
 	$("#project").html('<div id="loadingContent" class="content" align="center"><p>Content is loading ...</p><img src="img/loading.gif" /></div>');
+	$("#project").show();
 	var jqxhr = $.ajax(url.replace(/([a-zA-Z0-9]+)\/([a-zA-Z0-9]+)/, '$1_$2'))
-	.done(function()
+	.done(function(data)
 	{
-		alert("success");
+		$("#project").html(data);
 	})
 	.fail(function()
 	{
