@@ -4,6 +4,12 @@ if($_GET["url"] == "")
 	require("projects_list.php");
 	include("index.html");
 }
+else if(preg_match("/([a-zA-Z0-9]+)_([a-zA-Z0-9]+)/", $_GET["url"], $matches))
+{
+	echo "<pre>";
+	var_dump($matches);
+	echo "</pre>";
+}
 else if($_GET["url"] == "index.html")
     header("Location: http://www.revs0.com");
 else if($_GET["url"] == "css/theme")
