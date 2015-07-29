@@ -605,7 +605,7 @@ hr {
 }
 
 /*********************************************************************************/
-/* Project status                                                                */
+/* Project content                                                               */
 /*********************************************************************************/
 
 #projectContent
@@ -641,6 +641,10 @@ hr {
 	list-style: none;
     line-height: normal;
     padding: 5px 0px 0px 0px;
+}
+.projectStatusHeadline i
+{
+	color: lightgrey;
 }
 
 

@@ -14,9 +14,9 @@ function renderProject($project)
 			<h2>Project Status</h2>
 		</div>
 		<div class="projectStatusHeadline">
-			<h3>State</h3>
+			<h3>State <i class="icon icon-question-sign"></i></h3>
 			<p><?php echo $project["state"]; ?></p>
-			<h3>Redaction</h3>
+			<h3>Redaction <i class="icon icon-question-sign"></i></h3>
 			<p><?php echo $project["redaction"]; ?></p>
 			<h3><?php echo count($project["creators"]) > 1 ? "Creators" : "Creator"; ?></h3>
 			<ul>
