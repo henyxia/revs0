@@ -1,12 +1,11 @@
 <?php
-
 function renderProject($project)
 {
 ?>
 <br />
 <div id="projectContent">
-	<h2><?php echo $project["name"]; ?></h2>
-	<p><?php echo $project["content"]; ?></p>
+	<h2><?php echo $project->status->name; ?></h2>
+	<p><?php echo $project->content; ?></p>
 </div>
 <div id="projectSidebar">
 	<div class="projectStatus">
@@ -17,7 +16,7 @@ function renderProject($project)
 			<h3>State <i class="icon icon-question-sign"></i></h3>
 			<p 
 <?php
-$state = $project["state"];
+$state = $project->status->state;
 if($state == "Proposition")
 	echo 'class="info">';
 else if($state == "In Progress")
@@ -33,7 +32,7 @@ echo $state;
 			<h3>Redaction <i class="icon icon-question-sign"></i></h3>
 			<p 
 <?php
-$redaction = $project["redaction"];
+$redaction = $project->status->redaction;
 if($redaction == "Not Started")
 	echo 'class="error">';
 else if($redaction == "In Progress")
@@ -45,20 +44,20 @@ else
 echo $redaction;
 ?>
 			</p>
-			<h3><?php echo count($project["creators"]) > 1 ? "Creators" : "Creator"; ?></h3>
+			<h3><?php echo count($project->status->creators->creator) > 1 ? "Creators" : "Creator"; ?></h3>
 			<ul>
 <?php
-$authors = count($project["creators"]);
+$authors = count($project->status->creators->creator);
 for($i=0; $i<$authors; $i++)
-	echo "<li>".$project["creators"][$i]."</li>";
+	echo "<li>".$project->status->creators->creator[$i]."</li>";
 ?>
 			</ul>
 			<h3>Keywords</h3>
 			<ul>
 <?php
-$keywords = count($project["keywords"]);
+$keywords = count($project->status->keywords->keyword);
 for($i=0; $i<$keywords; $i++)
-	echo "<li>".$project["keywords"][$i]."</li>";
+	echo "<li>".$project->status->keywords->keyword[$i]."</li>";
 ?>
 			</ul>
 

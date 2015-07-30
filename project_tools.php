@@ -5,6 +5,6 @@ function getProjectName($projects, $folder, $name)
 	for($i=0; $i<count($projects); $i++)
 		if($projects[$i]["fold"] == $folder &&
 			$projects[$i]["arti"] == $name)
-			return "projects/".$folder."_".$name.".php";
+			return $folder."_".$name;
 	return "project_not_found.php";
 }

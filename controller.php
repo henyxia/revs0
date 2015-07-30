@@ -1,7 +1,7 @@
 <?php
 if($_GET["url"] == "")
 {
-	require("projects_list.php");
+	require("project_list.php");
 	include("index.html");
 }
 else if(preg_match("/([a-zA-Z0-9]+)_([a-zA-Z0-9]+)/", $_GET["url"], $matches))
@@ -9,11 +9,10 @@ else if(preg_match("/([a-zA-Z0-9]+)_([a-zA-Z0-9]+)/", $_GET["url"], $matches))
 	$folder = $matches[1];
 	$article = $matches[2];
 
-	require_once("projects_list.php");
-	require_once("projects_tools.php");
-
-	if((@include getProjectName($projects, $folder, $article)) === false)
-		require_once("project_not_found.php");
+	require_once("project_list.php");
+	require_once("project_tools.php");
+	require_once("project_reader.php");
+	readProject(getProjectName($projects, $folder, $article));
 }
 else if($_GET["url"] == "index.html")
     header("Location: http://www.revs0.com");
