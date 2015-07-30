@@ -18,11 +18,11 @@ function renderProject($project)
 			<p 
 <?php
 $state = $project["state"];
-if($state == "Not Started")
-	echo 'class="error">';
+if($state == "Proposition")
+	echo 'class="info">';
 else if($state == "In Progress")
 	echo 'class="warning">';
-else if($state == "Done")
+else if($state == "Finished")
 	echo 'class="success">';
 else
 	echo '>Potential error : ';
