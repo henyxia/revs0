@@ -5,6 +5,7 @@ function renderProject($project)
 <br />
 <div id="projectContent">
 	<h2><?php echo $project->status->name; ?></h2>
+	<br />
 	<p><?php echo $project->content; ?></p>
 </div>
 <div id="projectSidebar">

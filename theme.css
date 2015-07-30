@@ -518,6 +518,7 @@ ul.contact li a.icon-rss:before
 {
 	float: right;
 	width: 790px;
+	text-align: justify;
 }
 
 /* Project sidebar */
