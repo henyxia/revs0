@@ -15,9 +15,36 @@ function renderProject($project)
 		</div>
 		<div class="projectStatusHeadline">
 			<h3>State <i class="icon icon-question-sign"></i></h3>
-			<p><?php echo $project["state"]; ?></p>
+			<p 
+<?php
+$state = $project["state"];
+if($state == "Not Started")
+	echo 'class="error">';
+else if($state == "In Progress")
+	echo 'class="warning">';
+else if($state == "Done")
+	echo 'class="success">';
+else
+	echo '>Potential error : ';
+echo $state;
+?>
+
+			</p>
 			<h3>Redaction <i class="icon icon-question-sign"></i></h3>
-			<p><?php echo $project["redaction"]; ?></p>
+			<p 
+<?php
+$redaction = $project["redaction"];
+if($redaction == "Not Started")
+	echo 'class="error">';
+else if($redaction == "In Progress")
+	echo 'class="warning">';
+else if($redaction == "Done")
+	echo 'class="success">';
+else
+	echo '>Potential error : ';
+echo $redaction;
+?>
+			</p>
 			<h3><?php echo count($project["creators"]) > 1 ? "Creators" : "Creator"; ?></h3>
 			<ul>
 <?php

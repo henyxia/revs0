@@ -13,7 +13,6 @@ function activateElements(elem)
 
 function switchToSubject(url)
 {
-	console.debug(url);
 	$("#page").fadeOut(500, "swing", function (){return true;});
 	$("#portfolio-wrapper").fadeOut(500, "swing", function (){return true;});
 	$("html, body").animate({ scrollTop: $('#menu-wrapper').offset().top }, 500);

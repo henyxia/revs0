@@ -647,9 +647,25 @@ hr {
 	color: lightgrey;
 }
 
+/* Status colors */
 
+.success
+{
+	color: rgb(42, 232, 0);
+}
 
+.warning
+{
+	color: rgb(255, 180, 0);
+}
 
+.error
+{
+	color: rgb(255, 21, 0);
+}
 
+.info
+{
+	color: rgb(0, 121, 255);
+}
 
-	
