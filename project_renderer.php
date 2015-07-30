@@ -14,7 +14,7 @@ function renderProject($project)
 		</div>
 		<div class="projectStatusHeadline">
 			<h3>
-				State <i class="tooltip" data-tool="banana bana fo filly">
+				State <i class="tooltip" data-tool="Propostion: the project exists but has not started yet">
 					<i class="icon icon-question-sign"></i>
 				</i>
 			</h3>
