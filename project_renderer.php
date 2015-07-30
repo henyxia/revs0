@@ -13,7 +13,11 @@ function renderProject($project)
 			<h2>Project Status</h2>
 		</div>
 		<div class="projectStatusHeadline">
-			<h3>State <i class="icon icon-question-sign"></i></h3>
+			<h3>
+				State <i class="tooltip" data-tool="banana bana fo filly">
+					<i class="icon icon-question-sign"></i>
+				</i>
+			</h3>
 			<p 
 <?php
 $state = $project->status->state;
