@@ -703,9 +703,9 @@ i.tooltip:before
 	visibility: hidden;
 	width: 0;
 	height: 0;
-	left: 120%;//50%;
-	bottom: 30%;//0px;
-	/*opacity: 0;*/
+	left: 120%;
+	bottom: 30%;
+	opacity: 0;
 	content: "";
 	border-style: solid;
 	border-width: 6px 6px 6px 0px;
