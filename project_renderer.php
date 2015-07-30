@@ -14,8 +14,20 @@ function renderProject($project)
 		</div>
 		<div class="projectStatusHeadline">
 			<h3>
-				State <i class="tooltip" data-tool="Propostion: the project exists but has not started yet">
-					<i class="icon icon-question-sign"></i>
+				State <i class="tooltip" data-tool="
+<?php
+$state = $project->status->state;
+if($state == "Proposition")
+	echo 'Propostion: the project exists but has not started yet';
+else if($state == "In Progress")
+	echo 'In Progress: the project is currently elvolving';
+else if($state == "Finished")
+	echo 'Finished: the project is finished and won\'t evolve anymore';
+else
+	echo '>Potential error : ';
+?>
+				">
+				<i class="icon icon-question-sign"></i>
 				</i>
 			</h3>
 			<p 
