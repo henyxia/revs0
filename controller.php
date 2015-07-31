@@ -4,7 +4,7 @@ if($_GET["url"] == "")
 	require("project_list.php");
 	include("index.html");
 }
-else if(preg_match("/([a-zA-Z0-9]+)_([a-zA-Z0-9]+)/", $_GET["url"], $matches))
+else if(preg_match("/arti_([a-zA-Z0-9]+)_([a-zA-Z0-9]+)/", $_GET["url"], $matches))
 {
 	$folder = $matches[1];
 	$article = $matches[2];
@@ -86,5 +86,18 @@ else if($_GET["url"] == "js/breath")
 else if($_GET["url"] == "debug/globals")
     include("globals.php");
 else
-	header("HTTP/1.0 404 Expected ".$_GET['url']." is not found");
+{
+	// Grabbing articles to get the correct item
+	include("project_tools.php");
+	//FIXME
+	// Potential security breach
+	$projectFile = searchForProject($_GET["url"]);
+	if($projectFile == false)
+		header("Location: /");
+	else
+	{
+		require("project_list.php");
+		include("index.html");
+	}
+}
 ?>
