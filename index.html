@@ -123,6 +123,8 @@ if(isset($projectFile))
 	$("#project").html('<div id="loadingContent" class="content" align="center"><p>Content is loading ...</p><img src="img/loading.gif" /></div>');
 	$("#project").show();
 	$("#project").html(`<?php require_once("project_reader.php"); readProject($projectFile); ?>`);
+	document.title = "Revs0 - "+$("#projectContent")[0].childNodes[1].innerText;
+
 </script>
 <?php
 }

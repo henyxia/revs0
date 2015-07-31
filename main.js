@@ -24,15 +24,14 @@ function switchToSubject(url)
 	.done(function(data)
 	{
 		$("#project").html(data);
+		title = $("#projectContent")[0].childNodes[1].innerText;
+		window.history.pushState({project: title}, "Revs 0 - "+title, title.replace(/\ /g, "_"));
+		document.title = "Revs0 - "+title;
 	})
 	.fail(function()
 	{
 		$("#project").html('<div id="loadingContent" class="content" align="center"><p>The content is not available yet ...</p></div>');
-	})/*
-	.always(function()
-	{
-		alert( "complete" );
-	});*/
+	});
 }
 
 function goBackToHome()
@@ -43,4 +42,6 @@ function goBackToHome()
 	$("#homeButton").addClass("current_page_item");
 	$("#projectButton").removeClass("current_page_item");
 	$("#project").hide();
+	window.history.pushState({home: "/"}, "Revs0", "/");
+	document.title = "Revs0";
 }
