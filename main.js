@@ -58,13 +58,12 @@ function startEditingContent()
 
 function htmlEncode(s)
 {
-  var el = document.createElement("div");
-  el.innerText = el.textContent = s;
-  s = el.innerHTML;
-  return s;
+	var map = {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'};
+	return text.replace(/[&<>"']/g, function(m) {return map[m];});
 }
 
 function publishContent()
 {
-	var preparedContent = htmlEncode($("#projectContentEdit"));
+	var preparedContent = htmlEncode($("#projectContentEdit")[0].innerHTML);
+
 }
