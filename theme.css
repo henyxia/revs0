@@ -615,3 +615,14 @@ i.tooltip:hover:before
 	visibility: visible;
 	opacity: 1;
 }
+/* Content edition */
+.titleInputEdit
+{
+	font-size: 2em;
+	width: 99%;
+}
+.textareaInputEdit
+{
+	width: 99%;
+	min-height: 300px;
+}

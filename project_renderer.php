@@ -6,7 +6,13 @@ function renderProject($project)
 <div id="projectContent">
 	<h2><?php echo $project->status->name; ?></h2>
 	<br />
-	<p><?php echo $project->content; ?></p>
+	<div id="projectContentFinal">
+<?php
+echo $project->content;
+?>
+	</div>
+	<textarea id="projectContentEdit" style="display:none;">
+	</textarea>
 </div>
 <div id="projectSidebar">
 	<div class="projectStatus">

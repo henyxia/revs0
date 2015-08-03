@@ -45,3 +45,26 @@ function goBackToHome()
 	window.history.pushState({home: "/"}, "Revs0", "/");
 	document.title = "Revs0";
 }
+
+function startEditingContent()
+{
+	var content = $("#projectContentFinal")[0];
+	var edit = $("#projectContentEdit")[0];
+	edit.innerHTML = content.innerHTML;
+	edit.style.display = "";
+	edit.className = "textareaInputEdit";
+	content.style.display = "none";
+}
+
+function htmlEncode(s)
+{
+  var el = document.createElement("div");
+  el.innerText = el.textContent = s;
+  s = el.innerHTML;
+  return s;
+}
+
+function publishContent()
+{
+	var preparedContent = htmlEncode($("#projectContentEdit"));
+}
