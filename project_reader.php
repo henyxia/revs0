@@ -1,11 +1,12 @@
 <?php
+require_once("project_class.php");
 require_once("project_renderer.php");
 
 function readProject($projectName)
 {
-	if(file_exists("projects/".$projectName.".xml"))
+	if(file_exists("projects/".$projectName.".pro"))
 	{
-		$project = simplexml_load_file("projects/".$projectName.".xml");
+		$project = unserialize(file_get_contents("projects/".$projectName.".pro"));
 		renderProject($project);
 	}
 	else

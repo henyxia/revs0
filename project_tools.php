@@ -1,4 +1,5 @@
 <?php
+require_once("project_class.php");
 
 function urlFy($name)
 {
@@ -21,11 +22,11 @@ function searchForProject($projectName)
 	for($i=0; $i<$filesNumber; $i++)
 	{
 		$fileParts = pathinfo($files[$i]);
-		if($fileParts['extension'] == "xml")
+		if($fileParts['extension'] == "pro")
 		{
 			//DEBUG
 			//echo "The file ".$files[$i]." is a XML\n";
-			$project = simplexml_load_file("projects/".$files[$i]);
+			$project = unserialize(file_get_contents("projects/".$files[$i]));
 			if(urlFy($project->status->name) == $projectName)
 				return $fileParts["filename"];
 		}
@@ -33,5 +34,6 @@ function searchForProject($projectName)
 		//else
 			//echo "The file ".$files[$i]." is not a XML\n";
 	}
+	die("aa");
 	return false;
 }

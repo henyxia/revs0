@@ -67,20 +67,20 @@ else
 echo $redaction;
 ?>
 			</p>
-			<h3><?php echo count($project->status->creators->creator) > 1 ? "Creators" : "Creator"; ?></h3>
+			<h3><?php echo count($project->status->creators) > 1 ? "Creators" : "Creator"; ?></h3>
 			<ul>
 <?php
-$authors = count($project->status->creators->creator);
+$authors = count($project->status->creators);
 for($i=0; $i<$authors; $i++)
-	echo "<li>".$project->status->creators->creator[$i]."</li>";
+	echo "<li>".$project->status->creators[$i]."</li>";
 ?>
 			</ul>
 			<h3>Keywords</h3>
 			<ul>
 <?php
-$keywords = count($project->status->keywords->keyword);
+$keywords = count($project->status->keywords);
 for($i=0; $i<$keywords; $i++)
-	echo "<li>".$project->status->keywords->keyword[$i]."</li>";
+	echo "<li>".$project->status->keywords[$i]."</li>";
 ?>
 			</ul>
 
