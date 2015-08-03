@@ -34,6 +34,5 @@ function searchForProject($projectName)
 		//else
 			//echo "The file ".$files[$i]." is not a XML\n";
 	}
-	die("aa");
 	return false;
 }
