@@ -67,3 +67,15 @@ function publishContent()
 	var preparedContent = htmlEncode($("#projectContentEdit")[0].innerHTML);
 
 }
+
+/*
+List of regex
+h1	^[\=]{1}([ \w]+)\={1}
+h2	^[\=]{2}([ \w]+)\={2}
+h3	^[\=]{3}([ \w]+)\={3}
+li1	^[\*]{1}\ ([ \w\']+)
+li2	^[\*]{2}\ ([ \w\']+)
+li3	^[\*]{3}\ ([ \w\']+)
+url	\[((http\:\/\/|https\:\/\/|ftp\:\/\/)([\w\.\/\-\?\=]*))([\ \w]+)?\]	1 url 4 name
+p	/^([\w\ \:\[\.\]\'\,\(\)\-\/]+)[\r\n]/gm
+*/

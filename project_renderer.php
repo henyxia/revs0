@@ -6,11 +6,11 @@ function renderProject($project)
 <div id="projectContent">
 	<h2><?php echo $project->status->name; ?></h2>
 	<br />
-	<div id="projectContentFinal">
-<?php
-echo $project->content;
-?>
-	</div>
+	<div id="projectContentFinal"><?php
+$content = $project->content;
+// Processing H1
+echo preg_replace("/^[\=]{1}([ \w]+)\={1}/m", "<h1>$1</h1>", $content);
+?></div>
 	<textarea id="projectContentEdit" style="display:none;">
 	</textarea>
 </div>
