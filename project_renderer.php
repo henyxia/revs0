@@ -17,6 +17,10 @@ $content = preg_replace("/\[((http\:\/\/|https\:\/\/|ftp\:\/\/)([\w\.\/\-\?\=]*)
 	"<a href=\"$1\">[Link]</a>", $content);
 $content = preg_replace("/\[((http\:\/\/|https\:\/\/|ftp\:\/\/)([\w\.\/\-\?\=]*))\ ([\ \w]+)\]/m",
 	"<a href=\"$1\">$4</a>", $content);
+// Processing lists
+$content = preg_replace("/^[\*]{1}\ ([ \w\'\(\)\-\,\.\/]+)/m", "<ul><li>$1</li></ul>", $content);
+$content = preg_replace("/^[\*]{2}\ ([ \w\'\(\)\-\,\.\/]+)/m", "<ul><li>$1</li></ul>", $content);
+$content = preg_replace("/^[\*]{3}\ ([ \w\'\(\)\-\,\.\/]+)/m", "<ul><li>$1</li></ul>", $content);
 // Rendering
 echo $content;
 ?></div>
