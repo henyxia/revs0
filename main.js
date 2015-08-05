@@ -38,12 +38,77 @@ function goBackToHome()
 {
 	$("#page").fadeIn(500, "swing", function (){return true;});
 	$("#portfolio-wrapper").fadeIn(500, "swing", function (){return true;});
+	$("#project").fadeOut(500, "swing", function (){return true;});
+	$("#about").fadeOut(500, "swing", function (){return true;});
+	$("#contact").fadeOut(500, "swing", function (){return true;});
+
 	$("html, body").animate({ scrollTop: $('#wrapper').offset().top }, 500);
+
 	$("#homeButton").addClass("current_page_item");
 	$("#projectButton").removeClass("current_page_item");
-	$("#project").hide();
+	$("#aboutButton").removeClass("current_page_item");
+	$("#contactButton").removeClass("current_page_item");
+
 	window.history.pushState({home: "/"}, "Revs0", "/");
 	document.title = "Revs0";
+}
+
+function goBackToProjects()
+{
+	$("#page").fadeIn(500, "swing", function (){return true;});
+	$("#portfolio-wrapper").fadeIn(500, "swing", function (){return true;});
+	$("#project").fadeOut(500, "swing", function (){return true;});
+	$("#about").fadeOut(500, "swing", function (){return true;});
+	$("#contact").fadeOut(500, "swing", function (){return true;});
+
+	$("html, body").animate({ scrollTop: $('#page').offset().top }, 500);
+
+	$("#homeButton").addClass("current_page_item");
+	$("#projectButton").removeClass("current_page_item");
+	$("#aboutButton").removeClass("current_page_item");
+	$("#contactButton").removeClass("current_page_item");
+
+	window.history.pushState({home: "/"}, "Revs0", "/");
+	document.title = "Revs0";
+}
+
+function goToAboutPage()
+{
+	$("#page").fadeOut(500, "swing", function (){return true;});
+	$("#portfolio-wrapper").fadeOut(500, "swing", function (){return true;});
+	$("#project").fadeOut(500, "swing", function (){return true;});
+	$("#about").fadeIn(500, "swing", function (){return true;});
+	$("#contact").fadeOut(500, "swing", function (){return true;});
+
+	$("html, body").animate({ scrollTop: $('#page').offset().top }, 500);
+
+	$("#homeButton").removeClass("current_page_item");
+	$("#projectButton").removeClass("current_page_item");
+	$("#aboutButton").addClass("current_page_item");
+	$("#contactButton").removeClass("current_page_item");
+
+	window.history.pushState({home: "/"}, "Revs0", "/");
+	document.title = "Revs0 - About";
+
+}
+
+function goToSendingForm()
+{
+	$("#page").fadeOut(500, "swing", function (){return true;});
+	$("#portfolio-wrapper").fadeOut(500, "swing", function (){return true;});
+	$("#project").fadeOut(500, "swing", function (){return true;});
+	$("#about").fadeOut(500, "swing", function (){return true;});
+	$("#contact").fadeIn(500, "swing", function (){return true;});
+
+	$("html, body").animate({ scrollTop: $('#wrapper').offset().top }, 500);
+
+	$("#homeButton").removeClass("current_page_item");
+	$("#projectButton").removeClass("current_page_item");
+	$("#aboutButton").removeClass("current_page_item");
+	$("#contactButton").addClass("current_page_item");
+
+	window.history.pushState({contact: "/"}, "Revs0 - Contact", "/");
+	document.title = "Revs0 - Contact";
 }
 
 function startEditingContent()

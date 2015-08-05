@@ -27,9 +27,9 @@
 		<div id="menu" class="container">
 			<ul>
 				<li id="homeButton" class="current_page_item" onclick="goBackToHome();"><a href="javascript:void(0)">Homepage</a></li>
-				<li id="projectButton" onclick="$('html, body').animate({ scrollTop: $('#page').offset().top }, 500);"><a href="javascript:void(0)">Projects</a></li>
-				<li onclick="$('html, body').animate({ scrollTop: $('#page').offset().top }, 500);"><a href="javascript:void(0)">About</a></li>
-				<li onclick="alert('In construction')"><a href="javascript:void(0)">Contact</a></li>
+				<li id="projectButton" onclick="goBackToProjects();"><a href="javascript:void(0)">Projects</a></li>
+				<li id="aboutButton" onclick="goToAboutPage();"><a href="javascript:void(0)">About</a></li>
+				<li id="contactButton" onclick="goToSendingForm();"><a href="javascript:void(0)">Contact</a></li>
 			</ul>
 		</div>
 		<!-- end #menu --> 
@@ -105,6 +105,7 @@ for($i=0; $i<count($projects); $i++)
 		</div>
 	</div>
 	<div id="contact" class="container" style="display:none;">
+		<br />
 		<div class="title">
 			<h2>Sending an eMail</h2>
 			<span class="byline">Want more information ? Feel free to ask !</span>
@@ -112,7 +113,7 @@ for($i=0; $i<count($projects); $i++)
 		<p>If you want a response, just insert you mail adress here :</p>
 		<p><input id="senderMail" type="text" value="yourmail@isp.net" oninput="function validateEmail(email){var re=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;return re.test(email);}var data=$('#validEmail')[0];if(this.value=='yourmail@isp.net')data.className='icon icon-question-sign';else if(validateEmail(this.value))data.className='icon icon-check'; else data.className='icon icon-remove';"\>&nbsp;<i id="validEmail" class="icon icon-question-sign"></i></p>
 		<p>As we want to help as many people as possible with our website, don't hesitate to ask us anything ! We will always try to improve this site, so any comment is welcome !</p>
-		<textarea id="contentMail">Also, this website needs to give big thanks to <a href="http://templated.co" rel="nofollow">TEMPLATED</a> for their awesome template <strong>Sewing Bobbins</strong>, a free, fully standards-compliant CSS template. These big thanks go to <a href="http://www.google.com" title="Google">Google</a> as well for some of their icons distributed by <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a></textarea>
+		<textarea id="contentMail">Type your message here</textarea>
 		<p><input type="button" value="Send !" onclick="sendEmail();"></p>
 	</div>
 	<div id="project" class="container">
