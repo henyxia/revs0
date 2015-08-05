@@ -114,7 +114,7 @@ for($i=0; $i<count($projects); $i++)
 		<p><input id="senderMail" type="text" value="yourmail@isp.net" oninput="function validateEmail(email){var re=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;return re.test(email);}var data=$('#validEmail')[0];if(this.value=='yourmail@isp.net')data.className='icon icon-question-sign';else if(validateEmail(this.value))data.className='icon icon-check'; else data.className='icon icon-remove';"\>&nbsp;<i id="validEmail" class="icon icon-question-sign"></i></p>
 		<p>As we want to help as many people as possible with our website, don't hesitate to ask us anything ! We will always try to improve this site, so any comment is welcome !</p>
 		<textarea id="contentMail">Type your message here</textarea>
-		<p><input type="button" value="Send !" onclick="sendEmail();"></p>
+		<p><input id="sendButton" type="button" value="Send !" onclick="sendEmail();"></p>
 	</div>
 	<div id="project" class="container">
 	</div>

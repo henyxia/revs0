@@ -117,6 +117,7 @@ function sendEmail()
 {
 	var sender = $("#senderMail")[0].value;
 	var content = $("#contentMail")[0].textContent;
+	$("#sendButton")[0].disabled=true;
 
 	var jqxhr = $.ajax(
 	{
@@ -126,10 +127,14 @@ function sendEmail()
 	})
 	.done(function(data)
 	{
-		alert(data);
+		if(data == "success")
+			$("#sendButton")[0].value="The message has succefully been sended ! Thank you !";
+		else
+			$("#sendButton")[0].value="The message could not be delivred, please try again later";
 	})
 	.fail(function()
 	{
+		$("#sendButton")[0].value="The message could not be delivred, please try again later";
 		alert("error");
 	});
 }
