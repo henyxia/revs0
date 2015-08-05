@@ -626,3 +626,9 @@ i.tooltip:hover:before
 	width: 99%;
 	min-height: 300px;
 }
+/* Mail */
+#contentMail
+{
+	width: 100%;
+	min-height: 150px;
+}
