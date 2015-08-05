@@ -1,5 +1,4 @@
 <?php
-//$projects["number"]		= 7;
 $projects[0]["name"]	= "ADC for FPGA";
 $projects[0]["prog"]	= false;
 $projects[0]["elec"]	= true;
