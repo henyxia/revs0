@@ -15,7 +15,9 @@ else if(preg_match("/arti_([a-zA-Z0-9]+)_([a-zA-Z0-9]+)/", $_GET["url"], $matche
 	readProject(getProjectName($projects, $folder, $article));
 }
 else if($_GET["url"] == "index.html")
-    header("Location: http://www.revs0.com");
+	header("Location: http://www.revs0.com");
+else if($_GET["url"] == "sendMail")
+	require_once("send_mail.php");
 else if($_GET["url"] == "css/theme")
 {
     header("Content-type: text/css");
