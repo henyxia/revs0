@@ -135,7 +135,6 @@ function sendEmail()
 	.fail(function()
 	{
 		$("#sendButton")[0].value="The message could not be delivred, please try again later";
-		alert("error");
 	});
 }
 
