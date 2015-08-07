@@ -177,6 +177,7 @@ function sendEditedProject()
 		{
 			sender: username,
 			password: password,
+			project: Base64.encode($("#projectContent")[0].childNodes[1].innerText),
 			content: Base64.encode($("#projectContentEdit")[0].value)
 		}
 	})
