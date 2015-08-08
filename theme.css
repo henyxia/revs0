@@ -616,6 +616,31 @@ i.tooltip:hover:before
 	opacity: 1;
 }
 /* Content edition */
+#projectContent h2:not(#projectContentFinal)
+{
+	
+}
+#projectContentFinal h1
+{
+	color: black;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 1.8em;
+}
+#projectContentFinal h2
+{
+	color: black;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-size: 1.4em;
+}
+#projectContentFinal h3
+{
+	color: black;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 1.15em;
+}
 #editButton
 {
 	font-size: 0.7em;

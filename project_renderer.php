@@ -4,7 +4,7 @@ function renderProject($project)
 ?>
 <br />
 <div id="projectContent">
-	<h2><?php echo $project->status->name; ?></h2>
+	<h2 style="letter-spacing: 0.1em;font-weight: 700;font-size: 1.8em;color: #2F94A8;"><?php echo $project->status->name; ?></h2>
 	<br />
 	<div id="projectContentFinal"><?php
 $content = $project->content;
