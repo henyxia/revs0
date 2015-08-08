@@ -26,8 +26,7 @@ $content = preg_replace("/[\r\n]{3}/m", "<br/>", $content);
 // Rendering
 echo $content;
 ?></div>
-	<textarea id="projectContentEdit" style="display:none;">
-	</textarea>
+	<textarea id="projectContentEdit" style="display:none;"><?php echo $project->content; ?></textarea>
 </div>
 <div id="projectSidebar">
 	<div class="projectStatus">
