@@ -616,6 +616,22 @@ i.tooltip:hover:before
 	opacity: 1;
 }
 /* Content edition */
+#editButton
+{
+	font-size: 0.7em;
+}
+#editButton:hover
+{
+	cursor: pointer;
+}
+#validButton
+{
+	font-size: 0.7em;
+}
+#validButton:hover
+{
+	cursor: pointer;
+}
 .titleInputEdit
 {
 	font-size: 2em;

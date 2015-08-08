@@ -145,6 +145,7 @@ function sendEmail()
 
 function startEditingContent()
 {
+	$("#validButton")[0].style.display="";
 	var content = $("#projectContentFinal")[0];
 	var edit = $("#projectContentEdit")[0];
 	edit.innerHTML = content.innerHTML;

@@ -30,7 +30,7 @@ echo $content;
 <div id="projectSidebar">
 	<div class="projectStatus">
 		<div class="projectStatusTitle">
-			<h2>Project Status</h2>
+			<h2>Project Status <i id="editButton" class="icon icon-pencil" onclick="this.style.display='none';startEditingContent();"></i><i id="validButton" style="display:none" onclick="sendEditedProject()" class="icon icon-save"></i></h2>
 		</div>
 		<div class="projectStatusHeadline">
 			<h3>
