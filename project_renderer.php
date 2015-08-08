@@ -66,7 +66,20 @@ echo $state;
 ?>
 
 			</p>
-			<h3>Redaction <i class="icon icon-question-sign"></i></h3>
+			<h3>Redaction <i class="tooltip" data-tool="
+<?php
+$state = $project->status->redaction;
+if($state == "Not started")
+	echo 'Not started: the project exists but nothing has been written on it';
+else if($state == "In Progress")
+	echo 'In Progress: the project will be updated as soon as possible';
+else if($state == "Done")
+	echo 'Done: everything about this project is here';
+else
+	echo '>Potential error : ';
+?>
+				">
+				 <i class="icon icon-question-sign"></i></i></h3>
 			<p 
 <?php
 $redaction = $project->status->redaction;
