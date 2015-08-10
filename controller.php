@@ -20,6 +20,10 @@ else if($_GET["url"] == "sendMail")
 	require_once("send_mail.php");
 else if($_GET["url"] == "editProject")
 	require_once("project_edit.php");
+else if($_GET["url"] == "getMembers")
+	require_once("project_members_renderer.php");
+else if($_GET["url"] == "createProject")
+	require_once("project_create.php");
 else if($_GET["url"] == "css/theme")
 {
     header("Content-type: text/css");
