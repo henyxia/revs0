@@ -641,6 +641,28 @@ i.tooltip:hover:before
 	padding-bottom: 5px;
 	font-size: 1.15em;
 }
+.imgContentfull p
+{
+	font-style: italic;
+    color: rgb(156, 156, 156);
+	text-align: center;
+}
+.imgContentthumb
+{
+	padding-right: 15px;
+	float: left;
+}
+.imgContentthumb img
+{
+    padding-top: 5px;
+    width: 200px;
+}
+.imgContentthumb
+{
+	font-style: italic;
+    color: rgb(156, 156, 156);
+	text-align: center;
+}
 #editButton
 {
 	font-size: 0.7em;
