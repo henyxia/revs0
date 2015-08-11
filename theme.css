@@ -641,6 +641,10 @@ i.tooltip:hover:before
 	padding-bottom: 5px;
 	font-size: 1.15em;
 }
+.imgContentfull
+{
+	padding-top: 10px;
+}
 .imgContentfull p
 {
 	font-style: italic;
