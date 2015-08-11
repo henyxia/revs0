@@ -21,8 +21,10 @@ $content = preg_replace("/\[((http\:\/\/|https\:\/\/|ftp\:\/\/)([\w\.\/\-\?\=]*)
 $content = preg_replace("/^[\*]{1}\ ([ \w\'\(\)\-\,\.\/]+)/m", "<ul><li>$1</li></ul>", $content);
 $content = preg_replace("/^[\*]{2}\ ([ \w\'\(\)\-\,\.\/]+)/m", "<ul><li>$1</li></ul>", $content);
 $content = preg_replace("/^[\*]{3}\ ([ \w\'\(\)\-\,\.\/]+)/m", "<ul><li>$1</li></ul>", $content);
-// Processing lists
+// Processing LR
 $content = preg_replace("/[\r\n]{3}/m", "<br/>", $content);
+// Processing links
+$content = preg_replace("/^\[\[File\:([\w\.\/\:]*)\|(.*)\|(.*)\]\]$/m", '<div class="imgContent$2"><img src="$1" /><p>$3</p></div>', $content);
 // Rendering
 echo $content;
 ?></div>
