@@ -24,6 +24,8 @@ function userFound($uid)//, $eProject, $eContent)
 	$projectObject->status->name = base64_decode($_POST['project']);
 	$projectObject->status->state = base64_decode($_POST['state']);
 	$projectObject->status->redaction = base64_decode($_POST['redaction']);
+	$projectObject->status->creators = explode(";", base64_decode($_POST['creators']));
+	$projectObject->status->keywords = explode(";", base64_decode($_POST['keywords']));
 	file_put_contents("projects/".base64_decode($_POST['fold']).'_'.base64_decode($_POST['arti']).".pro",
 		serialize($projectObject));
 
