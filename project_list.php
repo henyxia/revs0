@@ -53,8 +53,8 @@ $projects[7]["prog"]	= true;
 $projects[7]["elec"]	= false;
 $projects[7]["fpga"]	= false;
 $projects[7]["othe"]	= false;
-$projects[7]["fold"]	= "web";
-$projects[7]["arti"]	= "thiswebsite";
+$projects[7]["fold"]	= "this";
+$projects[7]["arti"]	= "website";
 
 usort($projects, "custom_sort");
 function custom_sort($a,$b)

@@ -1,8 +1,8 @@
 <script src="jquery.js"></script>
-<table border="1">
+<table border="1" style="width:750px">
 	<tr>
 		<td>Project name</td>
-		<td><input id="name" type="text" /></td>
+		<td style="width:70%"><input id="name" type="text" /></td>
 	</tr>
 	<tr>
 		<td>Fold name</td>
@@ -31,6 +31,14 @@
 				<option value="Done">Done</option>
 			</select>
 		</td>
+	</tr>
+	<tr>
+		<td>Creators (comma ";" separated)</td>
+		<td><input id="creators" type="text" /></td>
+	</tr>
+	<tr>
+		<td>Keywords  (comma ";" separated)</td>
+		<td><input id="keywords" type="text" /></td>
 	</tr>
 	<tr>
 		<td colspan="2" align="center"><input type="button" value="Create project" onclick="createProject()"/></td>
@@ -69,7 +77,9 @@ function createProject()
 			arti: Base64.encode($("#arti")[0].value),
 			fold: Base64.encode($("#fold")[0].value),
 			state: Base64.encode($("#state")[0].value),
-			redaction: Base64.encode($("#redaction")[0].value)
+			redaction: Base64.encode($("#redaction")[0].value),
+			creators: Base64.encode($("#creators")[0].value),
+			keywords: Base64.encode($("#keywords")[0].value)
 		}
 	})
 	.done(function(data)
