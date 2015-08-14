@@ -13,9 +13,9 @@ $content = preg_replace("/^[\=]{1}([ \w\?\!\']+)\={1}/m", "<h1>$1</h1>", $conten
 $content = preg_replace("/^[\=]{2}([ \w\?\!\']+)\={2}/m", "<h2>$1</h2>", $content);
 $content = preg_replace("/^[\=]{3}([ \w\?\!\']+)\={3}/m", "<h3>$1</h3>", $content);
 // Processing URLs
-$content = preg_replace("/\[((http\:\/\/|https\:\/\/|ftp\:\/\/)([\w\.\/\-\?\=]*))\]/m",
+$content = preg_replace("/\[((http\:\/\/|https\:\/\/|ftp\:\/\/)([\~\w\.\/\-\?\=]*))\]/m",
 	"<a href=\"$1\">[Link]</a>", $content);
-$content = preg_replace("/\[((http\:\/\/|https\:\/\/|ftp\:\/\/)([\w\.\/\-\?\=]*))\ ([\ \w\.\~]+)\]/m",
+$content = preg_replace("/\[((http\:\/\/|https\:\/\/|ftp\:\/\/)([\~\w\.\/\-\?\=]*))\ ([\ \w\.]+)\]/m",
 	"<a href=\"$1\">$4</a>", $content);
 // Processing lists
 $content = preg_replace("/^[\*]{1}\ ([ \w\'\(\)\-\,\.\/]+)/m", "<ul><li>$1</li></ul>", $content);
