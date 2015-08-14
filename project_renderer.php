@@ -25,6 +25,8 @@ $content = preg_replace("/^[\*]{3}\ ([ \w\'\(\)\-\,\.\/]+)/m", "<ul><li>$1</li><
 $content = preg_replace("/[\r\n]{3}/m", "<br/>", $content);
 // Processing links
 $content = preg_replace("/^\[\[File\:([\w\.\/\:]*)\|(.*)\|(.*)\]\]$/m", '<div class="imgContent$2"><img src="$1" /><p>$3</p></div>', $content);
+// Processing pre
+$content = preg_replace("/\<code\>(.*)([\r\n])+\<\/code\>/s", '<div style="padding-top:10px;background-clip:content-box;background-color:turquoise;"><div class="spoiler">Code<div class="show">Show</div></div><pre style="display:none;>$1</pre></div>', $content);
 // Rendering
 echo $content;
 ?></div>
