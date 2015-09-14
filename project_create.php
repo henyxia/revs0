@@ -41,7 +41,7 @@
 		<td><input id="keywords" type="text" /></td>
 	</tr>
 	<tr>
-		<td colspan="2" align="center"><input type="button" value="Create project" onclick="createProject()"/></td>
+		<td colspan="2" align="center"><input type="button" value="Create project" onclick="createProject()"/><input type="button" value="Edit project" onclick="editProject()"/></td>
 	</tr>
 </table>
 <script>
@@ -80,6 +80,47 @@ function createProject()
 			redaction: Base64.encode($("#redaction")[0].value),
 			creators: Base64.encode($("#creators")[0].value),
 			keywords: Base64.encode($("#keywords")[0].value)
+		}
+	})
+	.done(function(data)
+	{
+		alert(data);
+		console.debug(data);
+	})
+	.fail(function()
+	{
+		alert("failed");
+	});
+}
+
+function editProject()
+{
+	if(username == undefined || username == null)
+	{
+		username = prompt("Please enter your username", "");
+		if(username == null)
+			return;
+		username = Base64.encode(username);
+	}
+
+	if(password == undefined || password == null)
+	{
+		password = prompt("Please enter your password", "");
+		password = Whirlpool(password);
+	}
+
+	var jqxhr = $.ajax(
+	{
+		url: "validProject",
+		type: 'POST',
+		data:
+		{
+			sender: username,
+			password: password,
+			arti: Base64.encode($("#arti")[0].value),
+			fold: Base64.encode($("#fold")[0].value),
+			state: Base64.encode($("#state")[0].value),
+			redaction: Base64.encode($("#redaction")[0].value),
 		}
 	})
 	.done(function(data)
