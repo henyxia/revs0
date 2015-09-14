@@ -1,1 +1,1 @@
-<?phpif(!isset($_GET["fold"]) || !isset($_GET["arti"]))	die("Target not defined");else{	echo "<pre>";	require_once("project_tools.php");	require_once("project_list.php");	$project = getProjectName($projects, $folder, $name);	echo "Selected project is $project";	echo "</pre>";}	
+<?phpif(isset($_GET["fold"]) && isset($_GET["arti"])){	echo "<pre>";	require_once("project_tools.php");	require_once("project_list.php");	$project = getProjectName($projects, $folder, $name);	echo "Selected project is $project";	echo "</pre>";}else	die("Target not defined");
