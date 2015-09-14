@@ -25,7 +25,7 @@ else if($_GET["url"] == "getMembers")
 else if($_GET["url"] == "createProject")
 	require_once("project_create.php");
 else if($_GET["url"] == "validProject")
-	require_once("project_creator.php");
+	require_once("project_validator.php");
 else if($_GET["url"] == "css/theme")
 {
     header("Content-type: text/css");
